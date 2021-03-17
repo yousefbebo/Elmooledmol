@@ -62,7 +62,7 @@ public class categoreyfragment extends Fragment {
     ArrayList<String> brandNames2 = new ArrayList<>();
     Spinner brands;
     String genderChoice;
-    int brandSelection;
+    int brandSelection = 0;
 
 
     @Override
