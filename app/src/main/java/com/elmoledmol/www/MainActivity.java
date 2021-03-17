@@ -161,7 +161,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         Intent intent = getIntent();
-//        counter.setText(String.valueOf(intent.getIntExtra("count",0)));
+        int indicator = intent.getIntExtra("from see all",0);
+        if (indicator == 1) {
+//            Bundle bundle=new Bundle();
+//            bundle.putInt("id", list.get(position).getBrandid());
+//            bundle.putString("name",list.get(position).getProduct());
+//            bundle.putInt("from home",2);
+            NavController navController2 = Navigation.findNavController(this,R.id.fragment2);
+            navController2.navigate(R.id.categoriesFragment);
+        }
         counter.setText(String.valueOf(loadData().size()));
     }
 

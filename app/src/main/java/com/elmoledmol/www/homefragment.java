@@ -79,6 +79,7 @@ public class homefragment extends Fragment {
         list6 = new ArrayList<>();
 
 
+
         // Request responsible for news available.
         {
             request3 = new JsonArrayRequest(newitems, new Response.Listener<JSONArray>() {
@@ -194,9 +195,10 @@ public class homefragment extends Fragment {
                             int price = jsonObject.getInt("productPrice");
                             int brandid = jsonObject.getInt("brandsId");
                             String image="http://clothesshopapi2.azurewebsites.net/img/products/"+jsonObject.getString("imgName");
+                            int percentage = jsonObject.getInt("ProductOfferPercentage");
                             String logo=jsonObject.getString("ImgBrands");
                             System.out.println(id);
-                            list6.add(new newsinheret(creatorName, price, "", image, logo, mainid, id, brandid, 0, 0));
+                            list6.add(new newsinheret(creatorName, price, "", image, logo, mainid, id, brandid, percentage, 0));
 
                         } catch (JSONException e) {
                             e.printStackTrace();
