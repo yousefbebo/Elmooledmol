@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -382,7 +383,7 @@ public class homefragment extends Fragment {
                             e.printStackTrace();
                         }
                     }
-                    searchby.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
+                    searchby.setLayoutManager(new GridLayoutManager(getContext(),2,LinearLayoutManager.HORIZONTAL,false));
                     searchadapter = new searchadapter(list4, getContext());
                     searchby.setAdapter(searchadapter);
                 }
@@ -516,15 +517,15 @@ public class homefragment extends Fragment {
         });
 
         // See all brands available.
-        see4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getContext(), seeAllSearch.class);
-                intent.putParcelableArrayListExtra("list", list4);
-                intent.putExtra("text", brand.getText().toString());
-                startActivity(intent);
-            }
-        });
+//        see4.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(getContext(), seeAllSearch.class);
+//                intent.putParcelableArrayListExtra("list", list4);
+//                intent.putExtra("text", brand.getText().toString());
+//                startActivity(intent);
+//            }
+//        });
 
         return v;
     }
