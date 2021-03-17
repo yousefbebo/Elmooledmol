@@ -69,7 +69,7 @@ public class homefragment extends Fragment {
         newa.setText("New Arrivals");
         tops.setText("Top deals");
         feature.setText("Featured");
-        brand.setText("Search by");
+        brand.setText("Search by brand");
 
         list = new ArrayList<>();
         list2 = new ArrayList<>();
